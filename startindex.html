@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js%27%3E'></script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://thelens.news/wp-content/uploads/2020/06/738-scaled.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="afterloginhomepage.html" class="w3-bar-item w3-button w3-wide">PHYLAXIS</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+
+
+      <a href="TestStats.html" class="w3-bar-item w3-button"><i class="fa fa-heart"></i> LOCATION</a>
+      <a href="Donate.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRODUCTS</a>
+
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">STATISTICS</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">DONATE</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+
+
+<div class = 'lstat3new'>
+  <a href ='TestStats.html' ><img class = 'lstat3' src='testsites.jpg'></a>
+  <div><p class='pStat3'>Location</p></div>
+</div>
+<div class = 'lstat4new'>
+  <a href ='Donate.html'><img class = 'lstat4' src='helpful.jpg'></a>
+  <p class='pStat4'>Products</p>
+</div>
+
+
+<footer class="w3-center w3-dark-grey w3-padding-64" id="footPage">
+  <a href="afterloginhomepage.html" class="w3-button w3-light-grey" id='homeButton'><i class='fa fa-Home'></i> Homepage</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-instagram w3-hover-opacity "></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+
+  </div>
+
+  <p>Made By: Advait Khanna </p>
+</footer>
+
+
+
+
+<style>
+  #footPage{
+    margin-top: 380px;
+  }
+
+
+  .lstat3{
+    margin-top: 480px;
+    height: 250px;
+    margin-left: -270px;
+    border-radius: 25px;
+    position: relative;
+
+  }
+  .lstat4{
+    margin-top: -170px;
+    height: 250px;
+    margin-left: 20px;
+    border-radius: 25px;
+
+  }
+
+  #homeButton{
+    border-radius: 25px;
+  }
+
+  .lstat3:hover{
+    margin-top: 480px;
+    height: 250px;
+    margin-left: -270px;
+    border-radius: 25px;
+    opacity: 0.8;
+
+  }
+  .lstat4:hover{
+    margin-top: -170px;
+    height: 250px;
+    margin-left: 20px;
+    border-radius: 25px;
+  opacity: 0.8;
+  }
+
+
+  .lstat3new{
+    margin-top: -350px;
+    margin-left: 800px;
+
+  }
+  .lstat4new{
+
+
+
+  }
+
+
+  .pStat3{
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: -148px;
+    margin-left: -130px;
+    color: white;
+    position: relative;
+    background-color: black;
+    width: 150px;
+    text-align: center;
+    opacity: 0.6;
+    border-radius: 20px;
+  }
+  .pStat4{
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: -148px;
+    margin-left: 140px;
+    color: white;
+    position: relative;
+    background-color: black;
+    width: 120px;
+    text-align: center;
+    opacity: 0.6;
+    border-radius: 20px;
+  }
+
+</style>
+
+
+
+
+  </body>
+</head>
+</html>

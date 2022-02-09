@@ -1,0 +1,435 @@
+<!--
+
+Provide support for people effected by coronavirus and create a community to help support and raise
+awareness about coronavirus
+
+On the homepage you can see stats on covid and other info about it
+
+A tab that shows the extent that caronavirus has effected people natoanally
+
+In your account we have many possible things you can do to support others that have been effected
+
+A tab that shows the extent that caronavirus has effected people in your local area
+
+Medical service and aid tab that has medical centers that need donatins or supplies
+
+Hospitals that are open and can take in people to get tested or treated
+
+-->
+<!DOCTYPE html>
+<html>
+<title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://thelens.news/wp-content/uploads/2020/06/738-scaled.jpg");
+  min-height: 100%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Donate</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="startindex.html" class="w3-bar-item w3-button"><i class="fa fa-arrow-left"></i> Back</a>
+
+
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+
+
+</nav>
+
+
+
+
+
+<!-- Pricing Section -->
+<div id = 'donateDiv' class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="pricing" >
+  <h3>What We Offer</h3>
+  <p class="w3-large">See What We Provide For You. </p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section" id='wvId'>
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Base Package</li>
+        <li class="w3-padding-16"><b>Description</b> Talk to our support team about your problems and we'll contact you shortly!</li>
+        <li class="w3-padding-16"><b>Price</b> $42.89 </li>
+
+          <button class="w3-button w3-black w3-padding-large">BUY</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-blue w3-xlarge w3-padding-48">Multi-Solution Package</li>
+        <li class="w3-padding-16"><b>Description</b> Contact our support team and we can spend up to 4 days assisting you and provide resources that assist you in your problems.</li>
+        <li class="w3-padding-16"><b>Price</b> $115.49 </li>
+
+        <li class="w3-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">BUY</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section" >
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Premium Package</li>
+        <li class="w3-padding-16"><b>Description</b>  Our team can spend over a week assisting with your solution and send you resources from our facilities around the country to assist you. </li>
+        <li class="w3-padding-16"><b>Price</b> $200.50  </li>
+
+        <li class="w3-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">BUY</button>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+
+  </div>
+  <p>Made By: Sujay Potlapelly and Advait Khanna </p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<style>
+.w3-large{
+  color: #0388fc;
+}
+.comImg{
+  height:90px;
+  border-radius: 25px;
+}
+.pasImg{
+  height: 90px;
+  border-radius: 25px;
+}
+.helpImg{
+  height: 90px;
+  border-radius: 25px;
+}
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <body>
+
+    <div class = 'phlaxisLogo'>
+      <h1 id='phylax'>Phylaxis</h1>
+    <a href="#home"><img class='logo' src='health.png'></a>
+
+
+    </div>
+    <div class='nav'>
+
+      <div class="topnav">
+    <a class="active" href="#home">Home</a>
+
+   <a class = 'news' href="#news">Donate</a>
+   <div class='dropCont'><a class='dropDonate' href='#home'>Hospitals</a></div>
+  <div class='dropCont2'><a class='dropDonate2' href='#home'>Businesses</a></div>
+
+    <a class ='contact' href="#contact">Locate</a>
+    <a class = 'about' href="#about">About</a>
+
+  </div>
+
+    </div>
+
+  <div class = 'lowerImage'>
+    <div>
+      <a href="https://www.instagram.com/phylaxisapp/?hl=en">
+        <img class = 'ilogo' src='instalogo.png'>
+      </a>
+      </div>
+        <div>
+          <a href="home">
+        <img class = 'slogo' src='newnewsnaplogo.png'>
+      </a>
+      </div>
+      <h1 class = "cenText">Together we will fight through this.</h1>
+  </div>
+
+
+
+
+    <script>
+
+    </script>
+    <style>
+
+
+    .phlaxisLogo{
+      height: 30%;
+      length: 100%;
+       color: lightblue;
+       font-family: 'Saira Stencil One', cursive;
+       border-color: black;
+       background-image: url('medapp.png');
+       background-position:center;
+       text-align: center;
+       font-size: 40px;
+
+
+     }
+     .logo{
+       width:200px;
+     }
+
+     .nav{
+       height:7%;
+       font-size:35px;
+
+       font-family: 'Oswald', cursive;
+       background-color:grey;
+
+     }
+     .active{
+       color: lightblue;
+       text-decoration: none;
+       margin-left: 50px
+     }
+     .news{
+       color: lightblue;
+       text-decoration: none;
+       margin-left:190px;
+
+       display: inline-block;
+       height: 100%;
+
+
+     }
+     .contact{
+       color: lightblue;
+       text-decoration: none;
+       margin-left: 280px;
+     }
+     .about{
+       color: lightblue;
+       text-decoration: none;
+       margin-left: 190px;
+     }
+     a:hover{
+       color: white;
+
+     }
+     .slogo{
+           width: 83px;
+           margin-top:-78px;
+           margin-left: 610px
+            }
+     .logo:hover{
+       width: 210px;
+     }
+     .ilogo{
+       width: 70px;
+       margin-top: 130;
+       margin-left: 450px;
+        }
+        .lowerImage{
+          background-image: url('newbackgroundimg.jpg');
+          height: 100%;
+          background-size: 1200px
+        }
+        .cenText{
+          color: lightblue;
+          font-family: 'Noto Sans JP', sans-serif;
+          text-align: center;
+          margin-top: 100px
+        }
+        .ilogo:hover{
+          width: 80px;
+           }
+           .slogo:hover{
+             width: 97px;
+              }
+              .select{
+                color:grey;
+              }
+        .dropCont {
+
+          width: 10%;
+          height: 4%;
+          display: none;
+          position: absolute;
+          background-color: black;
+          min-width: 60px;
+          min-height: 10px;
+
+
+          z-index: 1;
+          margin-left:318px;
+
+          font-family: 'Noto Sans', sans-serif;
+          font-size: 17px;
+
+          text-align: center;
+          margin-top:12px;
+          padding-top:10px;
+          border-radius:5px;
+          the issue that i have is that whenevr i hover off of the main link my  yeah
+
+
+
+
+        }
+
+              .news:hover + .dropCont {
+                display:block;
+
+              }
+          a{
+            text-decoration: none;
+          }
+          .dropDonate{
+            color: lightblue;
+          }
+          .news:hover + .dropCont2 {
+            display:block;
+
+          }
+          .dropCont2 {
+
+            width: 10%;
+            height: 4%;
+            display: none;
+            position: relative;
+            background-color: black;
+            min-width: 60px;
+            min-height: 10px;
+
+
+
+            margin-left:327px;
+
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 17px;
+
+            text-align: center;
+            margin-top:18px;
+            padding-top:10px;
+
+
+
+
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+  </body>
+</head>
+</html>

@@ -1,0 +1,87 @@
+#footPage{
+  margin-top: 380px;
+}
+.localStats{
+  background-color: lightgrey;
+  height: 100%;
+  position: relative;
+  margin-top: 0px;
+
+}
+
+
+.lstat3{
+  margin-top: 480px;
+  height: 250px;
+  margin-left: -270px;
+  border-radius: 25px;
+  position: relative;
+
+}
+.lstat4{
+  margin-top: -170px;
+  height: 250px;
+  margin-left: 20px;
+  border-radius: 25px;
+
+}
+
+#homeButton{
+  border-radius: 25px;
+}
+
+.lstat3:hover{
+  margin-top: 480px;
+  height: 250px;
+  margin-left: -270px;
+  border-radius: 25px;
+  opacity: 0.8;
+
+}
+.lstat4:hover{
+  margin-top: -170px;
+  height: 250px;
+  margin-left: 20px;
+  border-radius: 25px;
+opacity: 0.8;
+}
+
+
+.lstat3new{
+  margin-top: -350px;
+  margin-left: 800px;
+
+}
+.lstat4new{
+
+
+
+}
+
+
+.pStat3{
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: -148px;
+  margin-left: -130px;
+  color: white;
+  position: relative;
+  background-color: black;
+  width: 150px;
+  text-align: center;
+  opacity: 0.6;
+  border-radius: 20px;
+}
+.pStat4{
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: -148px;
+  margin-left: 140px;
+  color: white;
+  position: relative;
+  background-color: black;
+  width: 120px;
+  text-align: center;
+  opacity: 0.6;
+  border-radius: 20px;
+}

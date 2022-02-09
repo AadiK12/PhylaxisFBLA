@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Context Basic</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=localContext&v=beta"
+      defer
+    ></script>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxvggSJuTVdxvJe4JynVeq_kuP1oMzal4&callback=initMap&v=weekly"
+      async
+    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <body>
+      <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+          <a href="#home" class="w3-bar-item w3-button w3-wide">Test Sites</a>
+          <!-- Right-sided navbar links -->
+          <div class="w3-right w3-hide-small">
+            <a href="startindex.html" class="w3-bar-item w3-button"><i class="fa fa-arrow-left"></i> BACK</a>
+
+
+          </div>
+          <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+      <div id="map"></div>
+      </body>
+      <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+      body, html {
+        height: 100%;
+        line-height: 1.8;
+      }
+
+      /* Full height image header */
+      .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://thelens.news/wp-content/uploads/2020/06/738-scaled.jpg");
+        min-height: 100%;
+      }
+
+      .w3-bar .w3-button {
+        padding: 16px;
+      }
+      </style>
+      <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+         height: 100%;
+       }
+
+       /* Optional: Makes the sample page fill the window. */
+       html,
+       body {
+         height: 100%;
+         margin: 0;
+         padding: 0;
+       }
+    </style>
+    <script>
+    function initMap() {
+      const myLatLng = { lat: 39.57486, lng: -105.00330 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: myLatLng,
+      });
+
+      new google.maps.Marker({
+        position: myLatLng,
+        map,
+        title: "Hello World!",
+      });
+    }
+    function initMap() {
+      const myLatlng = { lat: 39.57486, lng: -105.00330 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: myLatlng,
+      });
+      const marker = new google.maps.Marker({
+        position: myLatlng,
+        map,
+        title: "Click to zoom",
+      });
+
+      map.addListener("center_changed", () => {
+        // 3 seconds after the center of the map has changed, pan back to the
+        // marker.
+        window.setTimeout(() => {
+          map.panTo(marker.getPosition());
+        }, 3000);
+      });
+      marker.addListener("click", () => {
+        map.setZoom(8);
+        map.setCenter(marker.getPosition());
+      });
+    }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
