@@ -62,8 +62,8 @@ body, html {
 
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style=" background-image:url('backtheme.jpg'); height: 100%; width: 100%; background-size: cover; ">
-    <span class="w3-jumbo w3-hide-small" id="typeText" style="top: 200px; position: relative; left: 100px;">Serving You</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Serving You</span><br>
+    <span class="w3-jumbo w3-hide-small" id="typeText" style="">Serving You</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium" style="left: 50px;top: 150px; position: relative;">Serving You</span><br>
     <span class="w3-large"style="top: 200px; position: relative; left: 100px;">Help Us Help You</span>
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"style="top: 200px; position: relative; left: 100px;">Learn more</a></p>
   </div>
@@ -465,13 +465,26 @@ function w3_close() {
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 30% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+#typeText {
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid orange; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+letter-spacing: .13em; /* Adjust as needed */
+animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+top: 140px;
+position: absolute;
+left: 100px;
+font-size: 20px;
+
 }
 
 
